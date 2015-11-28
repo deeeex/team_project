@@ -1,4 +1,20 @@
 .jumbotron {
     background-color: #66ccff;
     color: #ffffff;
+    padding: 100px 25px;
+}
+.container-fluid {
+    padding: 60px 50px;
+}
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.foodimg {
+    font-size: 200px;
+}
+@@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
 }
