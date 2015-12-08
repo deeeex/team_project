@@ -12,7 +12,16 @@
 .foodimg {
     font-size: 200px;
 }
-@@media screen and (max-width: 768px) {
+.btn-md {
+    float: right;
+    margin-top: 2em;
+}
+.recipe {
+    -webkit-column-count:2;
+	-moz-column-count: 2;
+	column-count:2;
+}
+@media screen and (max-width: 768px) {
     .col-sm-4 {
         text-align: center;
         margin: 25px 0;
@@ -65,60 +74,20 @@
     width: 100%;
     position: absolute;
 }
-.slider {
-  position: relative;
-  width: 100%;
-  height: 470px;
-  /*border-bottom: 1px solid #ddd;*/
-}
-.slide {
-  /*background: transparent url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/feature-gradient-transparent.png') center center no-repeat;*/
-  background-size: cover;
-  display: none;
-  position: absolute;
-  margin-top: 0;
-  margin-bottom: 5em;
-  left: 0;
-  width: 100%;
-  height: 100%;
+
+.carousel-inner img {
+    /*-webkit-filter: grayscale(90%);*/
+    /*filter: grayscale(90%); /* make all photos black and white */*/
+    width: 100%; /* Set width to 100% */
+    margin: auto;
 }
 
-.active-slide {
-    display: block;
-}
-.slider-nav {
-  text-align: center;
-  margin-top: 5em;
+.carousel-caption h3 {
+    color: #fff !important;
 }
 
-.arrow-prev {
-  margin-right: 45px;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 9px;
-}
-
-.arrow-next {
-  margin-left: 45px;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 9px;
-}
-
-.slider-dots {
-  list-style: none;
-  display: inline-block;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.slider-dots li {
-  color: #bbbcbc;
-  display: inline;
-  font-size: 30px;
-  margin-right: 5px;
-}
-
-.slider-dots li.active-dot {
-  color: #363636;
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
 }
