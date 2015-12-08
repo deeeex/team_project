@@ -11,15 +11,16 @@
 }
 .foodimg {
     font-size: 200px;
+    margin-top: 0.1em;
 }
 .btn-md {
     float: right;
     margin-top: 2em;
 }
 .recipe {
-    -webkit-column-count:2;
-	-moz-column-count: 2;
-	column-count:2;
+    margin-top: 2em;
+    margin-bottom: 0;
+    /*font-weight:lighter !important*/
 }
 @media screen and (max-width: 768px) {
     .col-sm-4 {

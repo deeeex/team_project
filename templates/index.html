@@ -46,17 +46,44 @@
                 <div class="col-sm-8">
                     <h2>Food</h2>
                     <h4>One Skillet Chicken with Lemon Garlic Cream Sauce</h4>
-                    <div class="recipe">
-                        <p>Meat: Chicken breasts, boneless skinless
-                                   Condiments: 2 tbsp Lemon juice
-                                   Produce: 1 tbsp	Garlic;
-                                            2 tbsp	Parsley or basil;
-                                            1/3 cup	Shallots
-                                   Baking & Spices: 1/2 tsp Red pepper flakes;
-                                                    1 Salt and pepper
-                                   Canned Goods: 1 cup Chicken broth
-                                   Oils & Vinegars: 1 tbsp Olive oil
-                    </div>
+                    <table class="recipe table table-striped">
+                        <tr>
+                            <th>Meat:</th>
+                            <th style="font-weight: normal">Chicken breasts</th>
+                            <th style="font-weight: normal">boneless skinless</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>Condiments:</th>
+                            <th style="font-weight: normal">2 tbsp Lemon juice</th>
+                            <th style="font-weight: normal"></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>Produce:</th>
+                            <th style="font-weight: normal">1 tbsp Garlic</th>
+                            <th style="font-weight: normal">2 tbsp Parsley or basil</th>
+                            <th style="font-weight: normal">1/3 cup Shallots</th>
+                        </tr>
+                        <tr>
+                            <th>Baking & Spices:</th>
+                            <th>1/2 tsp Red pepper flakes</th>
+                            <th>1 Salt and pepper</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>Canned Goods:</th>
+                            <th>1 cup Chicken broth</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>Oils & Vinegars:</th>
+                            <th>1 tbsp Olive oil</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </table>
 
                     <button class="btn btn-default btn-md">More</button>
                 </div>
@@ -112,7 +139,7 @@
                   <img src="../static/image/wrapper1.jpg" alt="fall1">
                   <div class="carousel-caption">
                     <h2>Upper Peninsula</h2>
-                    <p>Michigan, Story of Fall.</p>
+                    <p>Michigan, the story of Fall.</p>
                   </div>
                 </div>
 
@@ -160,6 +187,39 @@
               <div class="col-sm-4">
                   <img class="img-responsive" src="../static/image/lips.png" alt="beauty">
               </div>
+            </div>
+        </div>
+        <!-- contact section -->
+        <div class="container-fluid">
+            <h2 class="text-center">CONTACT</h2>
+            <div class="row">
+            <div class="col-sm-5">
+              <p>Contact us and we'll get back to you asap.</p>
+              <p><span class="glyphicon glyphicon-map-marker"></span> Ann Arbor, MI</p>
+              <p><span class="glyphicon glyphicon-phone"></span> (734)123-45667</p>
+              <p><span class="glyphicon glyphicon-envelope"></span> tinyplanet@gmail.com</p>
+            </div>
+            <div class="col-sm-7">
+                <form action="{{ url_for('index') }}" method=post>
+                  {{ form.hidden_tag() }}
+
+                  {{ form.name.label }}
+                  {{ form.name }}
+
+                  {{ form.email.label }}
+                  {{ form.email }}
+
+                  {{ form.subject.label }}
+                  {{ form.subject }}
+
+                  {{ form.message.label }}
+                  {{ form.message }}
+
+                  {{ form.submit }}
+                </form>
+            </div>
+            <div class="googlemaps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.896065335839!2d-83.74236048508084!3d42.28074194810053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae406bf1f7cb%3A0xefd29040373a695a!2sNorth+Quadrangle+Residential+and+Academic+Complex!5e0!3m2!1sen!2sus!4v1449610349814" width="1280" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
 
