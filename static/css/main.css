@@ -1,3 +1,6 @@
+h2 {
+    color: #60c0f0;
+}
 .jumbotron {
     background: none;
     color: #ffffff;
@@ -17,6 +20,10 @@
     float: right;
     margin-top: 2em;
 }
+#food h4 {
+    margin-top: 1.25em;
+    color: rgb(90, 90, 90);
+}
 .recipe {
     margin-top: 2em;
     margin-bottom: 0;
@@ -31,7 +38,7 @@
 
 .navbar {
     margin-bottom: 0;
-    background-color: #66ccff;
+    background-color: #66ccff !important;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -120,4 +127,27 @@
 }
 .googlemap {
     display: block;
+}
+.like-button {
+    border: groove #fff 1px;
+}
+.liked {
+    background-color: #66ccff;
+    color: #fff;
+    border: 1px solid #ffffff;
+}
+footer a .glyphicon {
+    font-size: 20px;
+    color: #66ccff;
+    display: block;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+.social-buttons  a {
+    display: inline-block;
+    color: #66ccff;
+    margin-left: 1em;
+}
+.social-buttons  a:hover {
+    color: grey;
 }

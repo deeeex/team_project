@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{title}}</title>
+        <title>Tiny Planet</title>
         <link rel="stylesheet" href="../static/css/bootstrap.min.css">
         <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css">
         <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -16,8 +16,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="..js/bootstrap.min.js"></script>
-        <script src="../static/js/video.js"></script>
+        <script src="../static/js/background.js"></script>
         <script src="../static/js/slide.js"></script>
+        <script src="../static/js/like.js"></script>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
         <header>
@@ -36,7 +37,6 @@
                             <li><a href="#food">FOOD</a></li>
                             <li><a href="#video">VIDEO</a></li>
                             <li><a href="#gallery">TRAVEL</a></li>
-                            <li><a href="#beauty">BEAUTY</a></li>
                             <li><a href="#contact">CONTACT</a></li>
                         </ul>
                     </div>
@@ -116,13 +116,14 @@
                 </div>
             </div>
         </div>
-        <!-- movie section -->
+        <!-- Video section -->
         <div id="video" class="container-fluid bg-grey">
-            <div class="row">
-                <div class="col-sm-6">
+            <!-- <h2 class="text-center">Video</h2> -->
+            <div class="item row">
+                <div class="poster col-sm-6">
                     <img src="../static/image/video1.jpg" alt="the wrong mans" >
                 </div>
-                <div class="col-sm-6">
+                <div class="description col-sm-6">
                     <h2>Video</h2>
                     <h4>The Wrong Mans</h4>
                     <p>From actor/writer duo James Corden and Mathew Baynton, The Wrong
@@ -143,9 +144,26 @@
                            st themselves, but their loved ones and ultimately their whol
                            e town.<br>
                            - Written by BBC ad</p>
-                    <button class="btn btn-default btn-md">More</button>
+                    <!-- <button class="btn btn-default btn-md">More</button> -->
                 </div>
             </div>
+            <!-- <div class="item row">
+                <div class="poster col-sm-6">
+                    <img src="../static/image/video2.jpg" alt="that sugar film" >
+                </div>
+                <div class="description col-sm-6">
+                    <h4>That sugar film</h4>
+                    <p>One man's journey to discover the bitter truth about suga
+                        r. Damon Gameau embarks on a unique experiment to docume
+                        nt the effects of a high sugar diet on a healthy body, c
+                        onsuming only foods that are commonly perceived as 'heal
+                        thy'. Through this entertaining and informative journey,
+                         Damon highlights some of the issues that plague the sug
+                         ar industry, and where sugar lurks on supermarket shelv
+                         es. <br>
+                           - Written by Madman Entertainment</p>
+                </div>
+            </div> -->
         </div>
         <!-- travel section  -->
         <!-- <div class="container-fluid text-center"> -->
@@ -164,38 +182,52 @@
                 <div class="item active">
                   <img src="../static/image/wrapper1.jpg" alt="fall1">
                   <div class="carousel-caption">
-                    <h2>Upper Peninsula</h2>
+                    <h3>Upper Peninsula</h3>
                     <p>Michigan, the story of Fall.</p>
+                    <span class="btn like-button">
+                        <i class="fa fa-thumbs-up fa-lg"></i>&nbsp;Like
+                    </span>
                   </div>
                 </div>
 
                 <div class="item">
                   <img src="../static/image/wrapper2.jpg" alt="fall2">
                   <div class="carousel-caption">
-                    <h2>US 41 Road</h2>
+                    <h3>US 41 Road</h3>
                     <p>Tunnel of trees. You'll never know it looks like a ghost town at night</p>
+                    <span class="btn like-button">
+                        <i class="fa fa-thumbs-up fa-lg"></i>&nbsp;Like
+                    </span>
                   </div>
                 </div>
 
                 <div class="item">
                   <img src="../static/image/wrapper3.jpg" alt="flower">
                   <div class="carousel-caption">
-                    <h2>Guangzhou</h2>
+                    <h3>Guangzhou</h3>
                     <p>This is a city I where lived for four years and Winter never falls on this city.</p>
+                    <span class="btn like-button">
+                        <i class="fa fa-thumbs-up fa-lg"></i>&nbsp;Like
+                    </span>
                   </div>
                 </div>
                 <div class="item">
                   <img src="../static/image/wrapper4.jpg" alt="magic">
                   <div class="carousel-caption">
-                    <h2>My magic friend</h2>
+                    <h3>My magic friend <span class="btn like-button">
+                        <i class="fa fa-thumbs-up fa-lg"></i>&nbsp;Like</span>
+                    </h3>
                     <p>A friend of mine has the magic power to float her hat.</p>
                   </div>
                 </div>
                 <div class="item">
                   <img src="../static/image/wrapper5.jpg" alt="lake">
                   <div class="carousel-caption">
-                    <h2>Silver linings</h2>
+                    <h3>Silver linings</h3>
                     <p>I stood in front of Lake Erie in a runny day but every cloud has a silver lining.</p>
+                    <span class="btn like-button">
+                        <i class="fa fa-thumbs-up fa-lg"></i>&nbsp;Like
+                    </span>
                   </div>
                 </div>
               </div>
@@ -212,26 +244,10 @@
             <!-- </div> -->
 
         </div>
-        <!-- beauty section  -->
-        <div id="beauty" class="container-fluid text-center">
-            <div class="row">
-              <div class="col-sm-8">
-                  <h2>Beauty</h2>
-                  <h4>Eye Care</h4>
-                  <p>If you're one of the many women who think eye creams are just another way for the cosmetic
-                    industry to get you to buy more skin care products, dermatologist Kenneth Beer, MD, PA,
-                    says you should reconsider. The skin around your eye is the thinnest layer of skin on
-                    your entire body, and therefore the most sensitive.
-                  </p>
-              </div>
-              <div class="col-sm-4">
-                  <img class="img-responsive" src="../static/image/lips.png" alt="beauty">
-              </div>
-            </div>
-        </div>
+
         <!-- contact section -->
         <div id="contact" class="container-fluid bg-grey">
-            <h2 class="text-center">CONTACT</h2>
+            <h2 class="text-center">Contact</h2>
             <div class="row">
                 <div class="col-sm-5">
                   <p>Contact us and we'll get back to you asap.</p>
@@ -240,7 +256,22 @@
                   <p><span class="glyphicon glyphicon-envelope"></span> tinyplanet@gmail.com</p>
                 </div>
                 <div class="col-sm-7">
-                    <form action="{{ url_for('index') }}" method=post>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                    <!-- <form action="{{ url_for('index') }}" method=post>
                       {{ form.hidden_tag() }}
 
                       {{ form.name.label }}
@@ -257,13 +288,25 @@
 
                       {{ form.submit }}
                     </form>
-                </div>
+                </div> -->
                 <div class="googlemap">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.896065335839!2d-83.74236048508084!3d42.28074194810053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae406bf1f7cb%3A0xefd29040373a695a!2sNorth+Quadrangle+Residential+and+Academic+Complex!5e0!3m2!1sen!2sus!4v1449610349814" width=100% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-
+        <!-- footer -->
+        <footer class="text-center">
+            <a href="#" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+            <span>Copyright © Tiny Planet 2015</span>
+            <span class="social-buttons">
+                <a href="https://instagram.com/xadieux">
+                    <i class="fa fa-instagram fa-lg"></i>
+                </a>
+                <a href="https://www.facebook.com/diyu.xiao.1">
+                    <i class="fa fa-facebook fa-lg"></i>
+                </a>
+            </span>
+        </footer>
 
     </body>
-<html>
+</html>

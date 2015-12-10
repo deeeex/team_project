@@ -1,39 +1,22 @@
-var main = function() {
- $('.dropdown-toggle').click(function(){
-     $('.dropdown-menu').toggle();
-     });
- $('.arrow-next').click(function() {
-     var currentSlide = $('.active-slide');
-     var nextSlide = currentSlide.next();
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-     var currentDot = $('.active-dot');
-     var nextDot = currentDot.next();
+  // Prevent default anchor click behavior
+  event.preventDefault();
 
-     if(nextSlide.length == 0) {
-         nextSlide = $('.slide').first();
-         nextDot = $('.dot').first();}
-     currentSlide.fadeOut(600).removeClass('active-slide'        );
-     nextSlide.fadeIn(600).addClass('active-slide');
+  // Store hash
+  var hash = this.hash;
 
-     currentDot.removeClass('active-dot');
-     nextDot.addClass('active-dot');
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 900, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
     });
-$('.arrow-prev').click(function(){
-    var currentSlide = $('.active-slide');
-    var prevSlide = currentSlide.prev();
-
-    var currentDot = $('.active-dot');
-    var prevDot = currentDot.prev;
-
-    if(prevSlide.length === 0) {
-        prevSlide = $('.slide').last();
-        prevDot = $('.dot').last();}
-
-    currentSlide.fadeOut(600).removeClass('active-slide'      );
-    prevSlide.fadeIn(600).addClass('active-slide');
-
-    currentDot.removeClass('active-dot');
-    prevDot.addClass('active-dot');
- });
-};
-$(document).ready(main);
+  });
+})
+// the Smooth Scrolling is from w3c school
