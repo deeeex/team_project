@@ -48,7 +48,7 @@ def contact():
     return render_template('contact.html', form=ContactForm(formdata=None, message="information is sent"), success=True, title="CONTACT PAGE")
 
   elif request.method == 'GET':
-    return render_template('contact.html', form=form, name = "contact", title = "CONTACT PAGE")
+    return render_template('contact.html', form=form, name = "contact", title = "Tiny Planet")
 
 if __name__ == '__main__':
     app.run(debug=True)		#debug=True is optional

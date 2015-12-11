@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+    {% block content %}
+
+    <div id="contact" class="container">
+      <div class="row">
+          <h2 class="col-sm-12">Contact</h2>
+      </div>
+
+      {% if success %}
+        <div class="success">Thank you for your message. I'll get back to you asap.
+        </div>
+      {% endif %}
+      <div class="row">
+          <div class="col-sm-6 col-sm-push-6">
+              <form action="{{ url_for('contact') }}" method=post class="form-group">
+                {{ form.hidden_tag() }}
+
+                {{ form.name.label }}
+                {{ form.name }}
+
+                {{ form.email.label }}
+                {{ form.email }}
+
+                {{ form.subject.label }}
+                {{ form.subject }}
+
+                {{ form.message.label }}
+                {{ form.message }}
+
+                {{ form.submit }}
+              </form>
+          </div>
+          <div class="col-sm-6  col-sm-pull-6">
+              <div class="row icon">
+                  <div class="col-sm-6">
+                      <p><span class="glyphicon glyphicon-phone"></span> (734)123-45667</p>
+                  </div>
+                  <div class="col-sm-6">
+                      <p><span class="glyphicon glyphicon-envelope"></span> tinyplanet@gmail.com</p>
+                  </div>
+              </div>
+              <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.896065335839!2d-83.74236048508084!3d42.28074194810053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae406bf1f7cb%3A0xefd29040373a695a!2sNorth+Quadrangle+Residential+and+Academic+Complex!5e0!3m2!1sen!2sus!4v1449610349814" width=390 height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+      </div>
+    </div>
+    {% endblock %}

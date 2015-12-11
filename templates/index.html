@@ -1,48 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tiny Planet</title>
-        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css">
-        <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="../static/css/main.css">
-        <link rel="icon" type="image/png" href="../static/image/d.png">
-        <script src="../static/js/jquery-1.11.3.min.js"></script>
-        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="..js/bootstrap.min.js"></script>
-        <script src="../static/js/background.js"></script>
-        <script src="../static/js/slide.js"></script>
-        <script src="../static/js/like.js"></script>
-    </head>
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-        <header>
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand topnav-icons fa fa-home fa-2x" href="#"></a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#food">FOOD</a></li>
-                            <li><a href="#video">VIDEO</a></li>
-                            <li><a href="#gallery">TRAVEL</a></li>
-                            <li><a href="#contact">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+{% extends "base.html" %}
+
+{% block content %}
     <!-- background video -->
         <div class="homepage-hero-module">
             <div class="video-container">
@@ -246,67 +204,7 @@
         </div>
 
         <!-- contact section -->
-        <div id="contact" class="container-fluid bg-grey">
-            <h2 class="text-center">Contact</h2>
-            <div class="row">
-                <div class="col-sm-5">
-                  <p>Contact us and we'll get back to you asap.</p>
-                  <p><span class="glyphicon glyphicon-map-marker"></span> Ann Arbor, MI</p>
-                  <p><span class="glyphicon glyphicon-phone"></span> (734)123-45667</p>
-                  <p><span class="glyphicon glyphicon-envelope"></span> tinyplanet@gmail.com</p>
-                </div>
-                <div class="col-sm-7">
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                        </div>
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                        </div>
-                    </div>
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <button class="btn btn-default pull-right" type="submit">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                    <!-- <form action="{{ url_for('index') }}" method=post>
-                      {{ form.hidden_tag() }}
 
-                      {{ form.name.label }}
-                      {{ form.name }}
+{% endblock %}
 
-                      {{ form.email.label }}
-                      {{ form.email }}
-
-                      {{ form.subject.label }}
-                      {{ form.subject }}
-
-                      {{ form.message.label }}
-                      {{ form.message }}
-
-                      {{ form.submit }}
-                    </form>
-                </div> -->
-                <div class="googlemap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.896065335839!2d-83.74236048508084!3d42.28074194810053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae406bf1f7cb%3A0xefd29040373a695a!2sNorth+Quadrangle+Residential+and+Academic+Complex!5e0!3m2!1sen!2sus!4v1449610349814" width=100% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-        <!-- footer -->
-        <footer class="text-center">
-            <a href="#" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
-            <span>Copyright © Tiny Planet 2015</span>
-            <span class="social-buttons">
-                <a href="https://instagram.com/xadieux">
-                    <i class="fa fa-instagram fa-lg"></i>
-                </a>
-                <a href="https://www.facebook.com/diyu.xiao.1">
-                    <i class="fa fa-facebook fa-lg"></i>
-                </a>
-            </span>
-        </footer>
-
-    </body>
-</html>
+        

@@ -110,9 +110,7 @@ h2 {
 }
 
 .carousel-inner img {
-    /*-webkit-filter: grayscale(90%);*/
-    /*filter: grayscale(90%); /* make all photos black and white */*/
-    width: 100%; /* Set width to 100% */
+    width: 100%;
     margin: auto;
 }
 
@@ -125,8 +123,16 @@ h2 {
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
 }
+.description h4 {
+    margin: 1em auto;
+}
+.description p {
+    text-indent: 1em;
+    line-height: 200%;
+}
 .googlemap {
     display: block;
+    margin-top: 0;
 }
 .like-button {
     border: groove #fff 1px;
@@ -150,4 +156,69 @@ footer a .glyphicon {
 }
 .social-buttons  a:hover {
     color: grey;
+}
+
+/*contact form*/
+#contact {
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#contact h2 {
+    text-align: center;
+}
+.icon {
+    margin: 1em 0;
+}
+form label {
+    font-size: 1.25em;
+    font-weight: bold;
+    display: block;
+    padding: 10px 0
+}
+form input#name,
+form input#email,
+form input#subject {
+    width: 16em;
+    background-color: #fafafa;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    border: 1px solid #cccccc;
+    padding: 5px;
+    font-size: 1.1em;
+}
+form textarea#message {
+    width: 20em;
+    height: 4em;
+    background-color: #fafafa;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    border: 1px solid #cccccc;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 1.1em;
+}
+form input#submit {
+    display: block;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+             border-radius: 3px;
+    border:1px solid #d8d8d8;
+    padding: 10px;
+    font-weight:bold;
+    text-align: center;
+    color: #000000;
+    background-color: #f4f4f4;
+}
+
+.success {
+    font-size: 1.25em;
+    color: #fff;
+    background-color: #66ccff;
+    font-weight: bold;
+    text-align: center;
+    width: 520px;
+    margin-left: 210px;
 }
